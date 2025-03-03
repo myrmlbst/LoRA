@@ -47,7 +47,7 @@ To improve the error, we can change the weights (remember that we can't change t
 - Gradient Descent: We calculate the gradient of the error function with respect to the weights and update the weights in the opposite direction of the gradient to minimize the error.
 - Backpropagation: The process of calculating the gradients of the error function with respect to the weights in a neural network. It is done by applying the chain rule of calculus to calculate the gradients layer by layer, starting from the output layer and moving backward to the input layer.
 
-# 4. Parameter-Efficient Fine-Tuning (PEFT)
+## 4. Parameter-Efficient Fine-Tuning (PEFT)
 ### 4.1. Understanding LoRa
 LoRA is a parameter-efficient fine-tuning technique that allows us to update the weights of a pre-trained model in a more efficient way by learning a low-rank approximation of the weight matrix. This can be useful when fine-tuning large models on small datasets, as it reduces the number of parameters that need to be updated.
 
