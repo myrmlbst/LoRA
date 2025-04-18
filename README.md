@@ -59,7 +59,7 @@ W and delta(W) must have the same size for the addition to work.
 **Implementation in PyTorch:**
 
 - **LoRA Layer:** 
-```
+```python
 class Lora(torch.nn.Module):
     def __init__(self, in_features: int, out_features: int, rank: int, alpha: float):
         super().__init__()
@@ -71,8 +71,8 @@ class Lora(torch.nn.Module):
         return self.alpha * (x @ self.A @ self.B)
 ```
 
-- **Fake LLm:**
-```
+- **Fake LLM:**
+```python
 class FakeLLM(torch.nn.Module):
     def __init__(self, in_features: int, out_features: int):
         super().__init__()
@@ -93,7 +93,7 @@ class FakeLLM(torch.nn.Module):
 ```
 
 - **Modified Network (Add LoRA Weights):**
-```
+```python
 class FakeLLMWLoRA(torch.nn.Module):
     def __init__(self, model, rank=2, alpha=0.5):
         super().__init__()
